@@ -1,0 +1,310 @@
+{
+  "seed": 7,
+  "calibration_packets": 1000,
+  "test_packets": 300,
+  "results": [
+    {
+      "variant": "staged_tiered",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.9386,
+      "false_accept_rate": 0.0008,
+      "auto_precision": 0.9991,
+      "straight_through_rate": 0.47,
+      "review_items_per_packet": 0.74,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 1.52,
+      "finding_recall": 0.9615,
+      "finding_precision": 0.995,
+      "latency_p50_s": 0.08,
+      "latency_p95_s": 2.88,
+      "cost_per_packet_usd": 0.0029,
+      "false_accepts_by_family": {
+        "construction": 2,
+        "occupancy": 1
+      }
+    },
+    {
+      "variant": "staged_frontier_only",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.9406,
+      "false_accept_rate": 0.0006,
+      "auto_precision": 0.9994,
+      "straight_through_rate": 0.4767,
+      "review_items_per_packet": 0.71,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 1.5,
+      "finding_recall": 0.9712,
+      "finding_precision": 0.9951,
+      "latency_p50_s": 0.08,
+      "latency_p95_s": 2.88,
+      "cost_per_packet_usd": 0.0078,
+      "false_accepts_by_family": {
+        "construction": 2
+      }
+    },
+    {
+      "variant": "staged_no_gates",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.9811,
+      "false_accept_rate": 0.0025,
+      "auto_precision": 0.9975,
+      "straight_through_rate": 0.7967,
+      "review_items_per_packet": 0.23,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 1.13,
+      "finding_recall": 0.9615,
+      "finding_precision": 0.995,
+      "latency_p50_s": 0.08,
+      "latency_p95_s": 2.88,
+      "cost_per_packet_usd": 0.0029,
+      "false_accepts_by_family": {
+        "construction": 3,
+        "occupancy": 5,
+        "values": 1
+      }
+    },
+    {
+      "variant": "monolith_frontier",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.7533,
+      "false_accept_rate": 0.0425,
+      "auto_precision": 0.9436,
+      "straight_through_rate": 0.7533,
+      "review_items_per_packet": 2.96,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 3.18,
+      "finding_recall": 0.7933,
+      "finding_precision": 0.9322,
+      "latency_p50_s": 9.0,
+      "latency_p95_s": 9.0,
+      "cost_per_packet_usd": 0.06,
+      "false_accepts_by_family": {
+        "identity": 10,
+        "construction": 48,
+        "occupancy": 16,
+        "protection": 39,
+        "values": 19,
+        "coverage": 21
+      }
+    }
+  ],
+  "ladder": {
+    "occupancy+model": {
+      "n": 306,
+      "precision": 0.9836601307189542,
+      "lower_bound": 0.9623,
+      "from": "suggest",
+      "to": "sampled review"
+    },
+    "identity+model": {
+      "n": 0,
+      "precision": null,
+      "lower_bound": 0.0,
+      "from": "suggest",
+      "to": "suggest"
+    },
+    "protection": {
+      "n": 2000,
+      "precision": 1.0,
+      "lower_bound": 0.9981,
+      "from": "suggest",
+      "to": "autonomous"
+    },
+    "values": {
+      "n": 1803,
+      "precision": 1.0,
+      "lower_bound": 0.9979,
+      "from": "suggest",
+      "to": "autonomous"
+    },
+    "coverage+model": {
+      "n": 0,
+      "precision": null,
+      "lower_bound": 0.0,
+      "from": "suggest",
+      "to": "suggest"
+    },
+    "construction+model": {
+      "n": 59,
+      "precision": 0.9830508474576272,
+      "lower_bound": 0.91,
+      "from": "suggest",
+      "to": "suggest"
+    },
+    "identity": {
+      "n": 1000,
+      "precision": 1.0,
+      "lower_bound": 0.9962,
+      "from": "suggest",
+      "to": "autonomous"
+    },
+    "values+model": {
+      "n": 19,
+      "precision": 1.0,
+      "lower_bound": 0.8318,
+      "from": "suggest",
+      "to": "suggest"
+    },
+    "construction": {
+      "n": 3651,
+      "precision": 0.9961654341276363,
+      "lower_bound": 0.9936,
+      "from": "suggest",
+      "to": "autonomous"
+    },
+    "protection+model": {
+      "n": 0,
+      "precision": null,
+      "lower_bound": 0.0,
+      "from": "suggest",
+      "to": "suggest"
+    },
+    "coverage": {
+      "n": 2000,
+      "precision": 1.0,
+      "lower_bound": 0.9981,
+      "from": "suggest",
+      "to": "sampled review"
+    },
+    "occupancy": {
+      "n": 621,
+      "precision": 1.0,
+      "lower_bound": 0.9939,
+      "from": "suggest",
+      "to": "autonomous"
+    }
+  },
+  "regression_drill": {
+    "ladder_after_drift": {
+      "occupancy+model": {
+        "n": 213,
+        "precision": 0.863849765258216,
+        "lower_bound": 0.8113,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "identity+model": {
+        "n": 0,
+        "precision": null,
+        "lower_bound": 0.0,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "protection": {
+        "n": 2000,
+        "precision": 1.0,
+        "lower_bound": 0.9981,
+        "from": "suggest",
+        "to": "autonomous"
+      },
+      "values": {
+        "n": 1803,
+        "precision": 1.0,
+        "lower_bound": 0.9979,
+        "from": "suggest",
+        "to": "autonomous"
+      },
+      "coverage+model": {
+        "n": 0,
+        "precision": null,
+        "lower_bound": 0.0,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "construction+model": {
+        "n": 49,
+        "precision": 0.9183673469387755,
+        "lower_bound": 0.8081,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "identity": {
+        "n": 1000,
+        "precision": 1.0,
+        "lower_bound": 0.9962,
+        "from": "suggest",
+        "to": "autonomous"
+      },
+      "values+model": {
+        "n": 19,
+        "precision": 1.0,
+        "lower_bound": 0.8318,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "construction": {
+        "n": 3651,
+        "precision": 0.9961654341276363,
+        "lower_bound": 0.9936,
+        "from": "suggest",
+        "to": "autonomous"
+      },
+      "protection+model": {
+        "n": 0,
+        "precision": null,
+        "lower_bound": 0.0,
+        "from": "suggest",
+        "to": "suggest"
+      },
+      "coverage": {
+        "n": 2000,
+        "precision": 1.0,
+        "lower_bound": 0.9981,
+        "from": "suggest",
+        "to": "sampled review"
+      },
+      "occupancy": {
+        "n": 621,
+        "precision": 1.0,
+        "lower_bound": 0.9939,
+        "from": "suggest",
+        "to": "autonomous"
+      }
+    },
+    "recalibrated": {
+      "variant": "staged_tiered + degraded small model (recalibrated)",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.9161,
+      "false_accept_rate": 0.0006,
+      "auto_precision": 0.9994,
+      "straight_through_rate": 0.3333,
+      "review_items_per_packet": 1.01,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 1.72,
+      "finding_recall": 0.9231,
+      "finding_precision": 0.9948,
+      "latency_p50_s": 0.08,
+      "latency_p95_s": 2.88,
+      "cost_per_packet_usd": 0.0029,
+      "false_accepts_by_family": {
+        "construction": 2
+      }
+    },
+    "stale": {
+      "variant": "staged_tiered + degraded small model (NOT recalibrated)",
+      "packets": 300,
+      "fields": 3600,
+      "auto_accept_rate": 0.9331,
+      "false_accept_rate": 0.0036,
+      "auto_precision": 0.9961,
+      "straight_through_rate": 0.44,
+      "review_items_per_packet": 0.8,
+      "follow_ups_per_packet": 0.23,
+      "review_minutes_per_packet": 1.57,
+      "finding_recall": 0.9231,
+      "finding_precision": 0.9948,
+      "latency_p50_s": 0.08,
+      "latency_p95_s": 2.88,
+      "cost_per_packet_usd": 0.0029,
+      "false_accepts_by_family": {
+        "construction": 2,
+        "occupancy": 11
+      }
+    }
+  }
+}

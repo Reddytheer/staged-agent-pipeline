@@ -1,0 +1,12 @@
+[project]
+name = "staged-agent-pipeline"
+version = "0.1.0"
+description = "Multi-step document agents with per-field confidence gates, human review, and an autonomy ladder earned on evals."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
